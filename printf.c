@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 		fpos++;
 	}
 	write(1, buff, _strlen(buff));
+	va_end(ap);
 	return (printCount);  /* should be number of characters printed */
 }
 
