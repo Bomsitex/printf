@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printHeadUpper - prints a hex in lower case.
+ * printHexUpper - prints a hex in lower case.
  *
  * @n: The integer to be printed.
  * @printCount: the count of printed characters
