@@ -8,6 +8,9 @@
  */
 void buffchar(int ch, char *buff)
 {
-char ch2 = ch;
-	_strncat(buff, &ch2, 1);
+	char ch2 = ch;
+
+	/* check for buffer overrun */
+	if (_strlen(buff) < BUFFLEN)
+		_strncat(buff, &ch2, 1);
 }

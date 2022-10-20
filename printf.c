@@ -1,5 +1,4 @@
 #include "main.h"
-#define NARGS 1024
 
 /**
  * _printf - print formatted output as per format specifiers
@@ -9,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int printCount = 0, fpos = 0, t = 0;
-	char buff[NARGS];
+	char buff[BUFFSIZE];
 	/* Do the variadic stuff here !! */
 	va_list ap;
 
@@ -19,7 +18,7 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 
-	for (t = 0; t < NARGS; t++)  /* initialise*/
+	for (t = 0; t < BUFFSIZE; t++)  /* initialise*/
 	{
 		buff[t] = '\0';
 	}

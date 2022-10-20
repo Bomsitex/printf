@@ -6,6 +6,9 @@
 #include <limits.h>
 #include <unistd.h>
 
+#define BUFFSIZE 1024
+#define BUFFLEN (BUFFSIZE - 1)
+
 /* printf specific functions */
 int _printf(const char *format, ...);
 const char *processPercent(const char *format,

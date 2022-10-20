@@ -16,7 +16,8 @@ void printStringUpper(char *s, int *printCount, char *buff)
 	/* check for NULL pointer */
 	if (s == NULL)
 	{
-		_strncat(buff, "(null)", 6);
+		if (_strlen(buff) < (BUFFLEN - 6))
+			_strncat(buff, "(null)", 6);
 		(*printCount) += 6;
 		return;
 	}
@@ -25,11 +26,13 @@ void printStringUpper(char *s, int *printCount, char *buff)
 	{
 		if (((*s > 0) && (*s < 32)) || (*s >= 127))
 		{
-			_strncat(buff, backslashx, 2);
+			if (_strlen(buff) < (BUFFLEN - 2))
+				_strncat(buff, backslashx, 2);
 			(*printCount) += 2;
 			if (*s < 16)
 			{
-				_strncat(buff, zero, 1);
+				if (_strlen(buff) < (BUFFLEN - 1))
+					_strncat(buff, zero, 1);
 				(*printCount)++;
 				printHexUpper(*s, printCount, buff);
 			}
