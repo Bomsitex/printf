@@ -8,6 +8,6 @@
  */
 void buffchar(int ch, char *buff)
 {
-char ch2 = ch;	
+char ch2 = ch;
 	_strncat(buff, &ch2, 1);
 }
