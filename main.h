@@ -6,7 +6,7 @@
 #include <limits.h>
 #include <unistd.h>
 
-#define BUFFSIZE 1024
+#define BUFFSIZE 1025
 #define BUFFLEN (BUFFSIZE - 1)
 
 /* printf specific functions */
