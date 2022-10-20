@@ -13,6 +13,10 @@ int _printf(const char *format, ...)
 	/* Do the variadic stuff here !! */
 	va_list ap;
 
+	/* check for null pointer */
+	if (format == NULL)
+		return (-1);
+
 	va_start(ap, format);
 
 	for (t = 0; t < NARGS; t++)  /* initialise*/

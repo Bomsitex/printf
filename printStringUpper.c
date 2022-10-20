@@ -13,6 +13,14 @@ void printStringUpper(char *s, int *printCount, char *buff)
 	char *backslashx = "\\x";
 	char *zero = "0";
 
+	/* check for NULL pointer */
+	if (s == NULL)
+	{
+		_strncat(buff, "(null)", 6);
+		(*printCount) += 6;
+		return;
+	}
+
 	while (*s)
 	{
 		if (((*s > 0) && (*s < 32)) || (*s >= 127))
@@ -36,3 +44,4 @@ void printStringUpper(char *s, int *printCount, char *buff)
 		}
 	}
 }
+

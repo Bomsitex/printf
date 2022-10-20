@@ -10,6 +10,13 @@
 
 void printString(char *s, int *printCount, char *buff)
 {
+	/* check for NULL pointer */
+	if (s == NULL)
+	{
+		_strncat(buff, "(null)", 6);
+		(*printCount) += 6;
+		return;
+	}
 	while (*s)
 	{
 		buffchar(*s, buff);
