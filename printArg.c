@@ -54,6 +54,9 @@ int printArg(va_list ap, char cspec, int *printCount, char *buff)
 	case 'r':/* string in reverse*/
 		printStringReverse(va_arg(ap, char *), printCount, buff);
 	break;
+	case 'R':/* string in Rot13 format*/
+		printStringRot13(va_arg(ap, char *), printCount, buff);
+	break;
 }
 	return (0);
 }

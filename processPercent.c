@@ -13,7 +13,7 @@ const char *processPercent(const char *format,
 		int *fpos, va_list ap, int *printCount, char *buff)
 {
 	int k;
-	char *conv = "csdibuoxXSpr%";
+	char *conv = "csdibuoxXSprR%";
 
 	/* format spec found */
 	/*if next item not a conversion specifier then print this % and continue */

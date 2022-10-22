@@ -29,6 +29,9 @@ void printHexUpperDigits(int n, int *printCount, char *buff);
 void printPointer(unsigned long int n, int *printCount, char *buff);
 void printPointerDigits(int n, int *printCount, char *buff);
 void buffchar(int ch, char *buff);
+char *rot13(char *str);
+void printStringRot13(char *s, int *printCount, char *buff);
+
 
 
 /* team library functions */
