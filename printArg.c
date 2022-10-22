@@ -48,8 +48,11 @@ int printArg(va_list ap, char cspec, int *printCount, char *buff)
 	case 'b':/* binary */
 		printBinary(va_arg(ap, unsigned int), printCount, buff);
 	break;
-	case 'S':/* string */
+	case 'S':/* string in upper case*/
 		printStringUpper(va_arg(ap, char *), printCount, buff);
+	break;
+	case 'r':/* string in reverse*/
+		printStringReverse(va_arg(ap, char *), printCount, buff);
 	break;
 }
 	return (0);

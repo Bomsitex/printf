@@ -17,6 +17,7 @@ int printArg(va_list ap, char cspec, int *printCount, char *buff);
 void printInt(int n, int *printCount, char *buff);
 void printChar(char ch, int *printCount, char *buff);
 void printString(char *s, int *printCount, char *buff);
+void printStringReverse(char *s, int *printCount, char *buff);
 void printStringUpper(char *s, int *printCount, char *buff);
 void printUnsignedInt(unsigned int n, int *printCount, char *buff);
 void printUnsignedOctal(unsigned int n, int *printCount, char *buff);
